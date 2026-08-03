@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motoro — Məxfilik Siyasəti</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2rem 1.25rem 4rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65; color: #1a1626; background: #f7f6fb;
+    max-width: 720px; margin-inline: auto;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #ececf2; background: #0c0a14; }
+    a { color: #43d6a5 !important; }
+    .card { background: #171425 !important; border-color: #2a2540 !important; }
+    h1, h2 { color: #fff !important; }
+  }
+  header { display: flex; align-items: center; gap: .7rem; margin-bottom: .5rem; }
+  .logo {
+    width: 42px; height: 42px; border-radius: 12px; flex: none;
+    background: linear-gradient(135deg, #0db284, #06b6d4);
+    display: flex; align-items: center; justify-content: center; color: #fff; font-size: 22px;
+  }
+  h1 { font-size: 1.6rem; margin: 0; }
+  .updated { color: #7a748a; font-size: .9rem; margin: .2rem 0 1.6rem; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 .6rem; }
+  .card {
+    background: #fff; border: 1px solid #e6e3ef; border-radius: 14px;
+    padding: 1rem 1.25rem; margin: 1rem 0;
+  }
+  .lead { font-size: 1.05rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  strong { font-weight: 600; }
+  footer { margin-top: 2.5rem; color: #7a748a; font-size: .9rem; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">🚗</div>
+    <h1>Motoro — Məxfilik Siyasəti</h1>
+  </header>
+  <p class="updated">Son yenilənmə: 3 avqust 2026</p>
+
+  <p class="lead">Motoro sənin məxfiliyinə hörmət edir. Bu siyasət tətbiqin hansı
+  məlumatları emal etdiyini sadə dildə izah edir.</p>
+
+  <div class="card">
+    <strong>Qısa xülasə</strong>
+    <ul>
+      <li><strong>Hesab yoxdur.</strong> Qeydiyyat, ad, e-poçt və ya telefon nömrəsi tələb olunmur.</li>
+      <li><strong>Məlumatların çoxu yalnız telefonunda saxlanılır</strong> — avtomobil profili, qaraj tarixləri, yanacaq jurnalı, sənədlər və skan tarixçəsi cihazında lokal qalır.</li>
+      <li><strong>Reklam yoxdur, izləmə yoxdur, məlumat satışı yoxdur.</strong></li>
+    </ul>
+  </div>
+
+  <h2>Hansı məlumatlar emal olunur</h2>
+
+  <p><strong>1. Avtomobil diaqnostika məlumatı.</strong> OBD-II adapteri vasitəsilə
+  oxunan xəta kodları (DTC), sensor göstəriciləri və VIN cihazında emal olunur. AI
+  izahı istədiyin zaman xəta kodları və avtomobil məlumatı (marka/model/il) müvəqqəti
+  olaraq təhlükəsiz serverimizə (Supabase) və AI provayderinə (OpenAI / DeepSeek)
+  göndərilir; şəxsi kimliyinlə əlaqələndirilmir və serverdə saxlanılmır.</p>
+
+  <p><strong>2. AI dizayn studiyası.</strong> Şəkil yaratmaq üçün avtomobilinin
+  marka/model/ili və sənin istəyin AI şəkil provayderinə göndərilir; nəticə cihazına
+  qaytarılır, serverdə saxlanılmır.</p>
+
+  <p><strong>3. Cihaz identifikatoru.</strong> Xidmətin sui-istifadəsinin qarşısını
+  almaq üçün quraşdırmada təsadüfi bir identifikator (UUID) yaradılır və yalnız gündəlik
+  sorğu limitini saymaq üçün istifadə olunur. Şəxsiyyətinlə, adınla və ya Apple ID-nlə
+  əlaqələndirilmir.</p>
+
+  <p><strong>4. Lokal məlumat.</strong> Avtomobil profili, sığorta/texbaxış/servis
+  tarixləri, yanacaq dolumları, sənədlər və skan tarixçəsi yalnız telefonunda saxlanılır
+  və istənilən vaxt tətbiq içindən silinə bilər.</p>
+
+  <p><strong>5. Abunəlik.</strong> Motoro Pro Apple App Store vasitəsilə idarə olunur.
+  Ödəniş məlumatını biz görmür və saxlamırıq.</p>
+
+  <h2>Üçüncü tərəf xidmətlər</h2>
+  <ul>
+    <li><strong>Supabase</strong> — AI sorğularını ötürən server.</li>
+    <li><strong>OpenAI / DeepSeek</strong> — diaqnoz mətni və şəkil generasiyası.</li>
+    <li><strong>Apple</strong> — abunəlik və ödəniş.</li>
+    <li><strong>ASAN ödəniş</strong> — "Cərimə yoxla" cihazının brauzerində xarici saytı açır; orada daxil etdiyin məlumat birbaşa həmin xidmətə gedir.</li>
+  </ul>
+
+  <h2>Uşaqlar</h2>
+  <p>Motoro uşaqlara yönəlmir və onlardan bilərəkdən məlumat toplamır.</p>
+
+  <h2>Dəyişikliklər</h2>
+  <p>Bu siyasəti yeniləyə bilərik; yenilənmə tarixi yuxarıda göstərilir.</p>
+
+  <h2>Əlaqə</h2>
+  <p>Suallarınız üçün tətbiqin App Store səhifəsindəki dəstək bölməsi vasitəsilə
+  bizimlə əlaqə saxlaya bilərsiniz.</p>
+
+  <footer>© 2026 Motoro. Bütün hüquqlar qorunur.</footer>
+</body>
+</html>
