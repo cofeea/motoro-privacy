@@ -44,7 +44,7 @@
     <div class="logo">🚗</div>
     <h1>Motoro — Məxfilik Siyasəti</h1>
   </header>
-  <p class="updated">Son yenilənmə: 3 avqust 2026</p>
+  <p class="updated">Son yenilənmə: 1 noyabr 2026</p>
 
   <p class="lead">Motoro sənin məxfiliyinə hörmət edir. Bu siyasət tətbiqin hansı
   məlumatları emal etdiyini sadə dildə izah edir.</p>
@@ -53,7 +53,8 @@
     <strong>Qısa xülasə</strong>
     <ul>
       <li><strong>Hesab yoxdur.</strong> Qeydiyyat, ad, e-poçt və ya telefon nömrəsi tələb olunmur.</li>
-      <li><strong>Məlumatların çoxu yalnız telefonunda saxlanılır</strong> — avtomobil profili, qaraj tarixləri, yanacaq jurnalı, sənədlər və skan tarixçəsi cihazında lokal qalır.</li>
+      <li><strong>Məlumatların çoxu yalnız telefonunda saxlanılır</strong> — skan tarixçəsi, xəta kodları, yürüş yoxlamaları və ayarlar cihazında lokal qalır.</li>
+      <li><strong>Dəqiq yerin heç vaxt toplanmır.</strong> Şəhər adını özün yazsan, yalnız o göndərilir.</li>
       <li><strong>Reklam yoxdur, izləmə yoxdur, məlumat satışı yoxdur.</strong></li>
     </ul>
   </div>
@@ -61,33 +62,34 @@
   <h2>Hansı məlumatlar emal olunur</h2>
 
   <p><strong>1. Avtomobil diaqnostika məlumatı.</strong> OBD-II adapteri vasitəsilə
-  oxunan xəta kodları (DTC), sensor göstəriciləri və VIN cihazında emal olunur. AI
-  izahı istədiyin zaman xəta kodları və avtomobil məlumatı (marka/model/il) müvəqqəti
-  olaraq təhlükəsiz serverimizə (Supabase) və AI provayderinə (OpenAI / DeepSeek)
-  göndərilir; şəxsi kimliyinlə əlaqələndirilmir və serverdə saxlanılmır.</p>
+  oxunan xəta kodları (DTC), sensor göstəriciləri, freeze frame, daxili test nəticələri və VIN
+  cihazında emal olunur. AI izahı istədiyin zaman xəta kodları, avtomobil məlumatı
+  (marka/model/il), bu kodların skan tarixçəndəki qısa xülasəsi (neçə dəfə və nə vaxt görünüb)
+  və dərin yoxlamanın nəticələri serverimizə (Cloudflare) və AI provayderinə (OpenAI)
+  göndərilir. Bu məlumat şəxsi kimliyinlə əlaqələndirilmir və serverdə saxlanılmır.</p>
 
-  <p><strong>2. AI dizayn studiyası.</strong> Şəkil yaratmaq üçün avtomobilinin
-  marka/model/ili və sənin istəyin AI şəkil provayderinə göndərilir; nəticə cihazına
-  qaytarılır, serverdə saxlanılmır.</p>
+  <p><strong>2. Şəhər (istəyə bağlı).</strong> Profildə şəhərini yazsan, AI yaxınlıqdakı
+  hissə mağazalarını və servisləri təklif etmək üçün yalnız şəhər adı AI sorğusu ilə birgə
+  göndərilir. AI bunun üçün açıq internet axtarışından istifadə edə bilər. GPS və ya dəqiq
+  yer məlumatı toplanmır. Şəhər sahəsini istənilən vaxt boşalda bilərsən.</p>
 
   <p><strong>3. Cihaz identifikatoru.</strong> Xidmətin sui-istifadəsinin qarşısını
   almaq üçün quraşdırmada təsadüfi bir identifikator (UUID) yaradılır və yalnız gündəlik
   sorğu limitini saymaq üçün istifadə olunur. Şəxsiyyətinlə, adınla və ya Apple ID-nlə
   əlaqələndirilmir.</p>
 
-  <p><strong>4. Lokal məlumat.</strong> Avtomobil profili, sığorta/texbaxış/servis
-  tarixləri, yanacaq dolumları, sənədlər və skan tarixçəsi yalnız telefonunda saxlanılır
-  və istənilən vaxt tətbiq içindən silinə bilər.</p>
+  <p><strong>4. Lokal məlumat.</strong> Skan tarixçəsi (tarix, VIN, avtomobil və tapılan
+  kodlar), yürüş yoxlamaları və ayarlar yalnız telefonunda saxlanılır və istənilən vaxt
+  tətbiq içindən silinə bilər (Tarixçə → Tarixçəni sil).</p>
 
   <p><strong>5. Abunəlik.</strong> Motoro Pro Apple App Store vasitəsilə idarə olunur.
   Ödəniş məlumatını biz görmür və saxlamırıq.</p>
 
   <h2>Üçüncü tərəf xidmətlər</h2>
   <ul>
-    <li><strong>Supabase</strong> — AI sorğularını ötürən server.</li>
-    <li><strong>OpenAI / DeepSeek</strong> — diaqnoz mətni və şəkil generasiyası.</li>
+    <li><strong>Cloudflare</strong> — AI sorğularını ötürən server.</li>
+    <li><strong>OpenAI</strong> — diaqnoz mətni və internet axtarışı ilə hissə/servis təklifləri.</li>
     <li><strong>Apple</strong> — abunəlik və ödəniş.</li>
-    <li><strong>ASAN ödəniş</strong> — "Cərimə yoxla" cihazının brauzerində xarici saytı açır; orada daxil etdiyin məlumat birbaşa həmin xidmətə gedir.</li>
   </ul>
 
   <h2>Uşaqlar</h2>
