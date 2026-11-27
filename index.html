@@ -44,7 +44,7 @@
     <div class="logo">🚗</div>
     <h1>Motoro — Məxfilik Siyasəti</h1>
   </header>
-  <p class="updated">Son yenilənmə: 1 noyabr 2026</p>
+  <p class="updated">Son yenilənmə: 27 noyabr 2026</p>
 
   <p class="lead">Motoro sənin məxfiliyinə hörmət edir. Bu siyasət tətbiqin hansı
   məlumatları emal etdiyini sadə dildə izah edir.</p>
@@ -55,7 +55,7 @@
       <li><strong>Hesab yoxdur.</strong> Qeydiyyat, ad, e-poçt və ya telefon nömrəsi tələb olunmur.</li>
       <li><strong>Məlumatların çoxu yalnız telefonunda saxlanılır</strong> — skan tarixçəsi, xəta kodları, yürüş yoxlamaları və ayarlar cihazında lokal qalır.</li>
       <li><strong>Dəqiq yerin heç vaxt toplanmır.</strong> Şəhər adını özün yazsan, yalnız o göndərilir.</li>
-      <li><strong>Reklam yoxdur, izləmə yoxdur, məlumat satışı yoxdur.</strong></li>
+      <li><strong>Reklam yoxdur, reklam izləməsi yoxdur, məlumat satışı yoxdur.</strong></li>
     </ul>
   </div>
 
@@ -63,9 +63,9 @@
 
   <p><strong>1. Avtomobil diaqnostika məlumatı.</strong> OBD-II adapteri vasitəsilə
   oxunan xəta kodları (DTC), sensor göstəriciləri, freeze frame, daxili test nəticələri və VIN
-  cihazında emal olunur. AI izahı istədiyin zaman xəta kodları, avtomobil məlumatı
+  cihazında emal olunur. Motoro İzah istədiyin zaman xəta kodları, avtomobil məlumatı
   (marka/model/il), bu kodların skan tarixçəndəki qısa xülasəsi (neçə dəfə və nə vaxt görünüb)
-  və dərin yoxlamanın nəticələri serverimizə (Cloudflare) və AI provayderinə (OpenAI)
+  və dərin yoxlamanın nəticələri serverimizə (Cloudflare) və mətn modeli provayderinə (OpenAI)
   göndərilir. Bu məlumat şəxsi kimliyinlə əlaqələndirilmir və serverdə saxlanılmır.</p>
 
   <p><strong>2. Şəhər (istəyə bağlı).</strong> Profildə şəhərini yazsan, AI yaxınlıqdakı
@@ -82,14 +82,27 @@
   kodlar), yürüş yoxlamaları və ayarlar yalnız telefonunda saxlanılır və istənilən vaxt
   tətbiq içindən silinə bilər (Tarixçə → Tarixçəni sil).</p>
 
-  <p><strong>5. Abunəlik.</strong> Motoro Pro Apple App Store vasitəsilə idarə olunur.
+  <p><strong>5. Abunəlik.</strong> Motoro Basic və Motoro Pro Apple App Store vasitəsilə idarə olunur.
   Ödəniş məlumatını biz görmür və saxlamırıq.</p>
+
+  <p><strong>6. Anonim istifadə statistikası.</strong> Tətbiqi yaxşılaşdırmaq üçün hansı
+  addımların atıldığını sayırıq: tətbiqin açılması, adapterin qoşulması (Bluetooth və ya Wi‑Fi,
+  uğurlu və ya uğursuz), skan, xəta kodunun açılması, abunə ekranı və alış nəticəsi. Hər
+  hadisə ilə yalnız təsadüfi quraşdırma identifikatoru, tətbiq versiyası, dil və ölkə
+  göndərilir. VIN, xəta kodlarının məzmunu, ad, e-poçt və ya yer məlumatı bu statistikaya
+  daxil edilmir. Məlumat Cloudflare serverimizdə saxlanılır, reklam üçün istifadə olunmur
+  və heç kimlə paylaşılmır.</p>
+
+  <p><strong>7. Bildirişlər.</strong> “Məsləhətlər və təkliflər” bildirişlərini açsan, cihazının
+  bildiriş tokeni (push token) həmin təsadüfi identifikatorla birgə saxlanılır ki, sənə
+  bildiriş göndərə bilək və onun açılıb-açılmadığını sayaq. Profildə bu seçimi söndürə
+  bilərsən.</p>
 
   <h2>Üçüncü tərəf xidmətlər</h2>
   <ul>
-    <li><strong>Cloudflare</strong> — AI sorğularını ötürən server.</li>
+    <li><strong>Cloudflare</strong> — sorğuları ötürən server, anonim statistika və bildirişlər.</li>
     <li><strong>OpenAI</strong> — diaqnoz mətni və internet axtarışı ilə hissə/servis təklifləri.</li>
-    <li><strong>Apple</strong> — abunəlik və ödəniş.</li>
+    <li><strong>Apple</strong> — abunəlik, ödəniş və bildirişlərin çatdırılması (APNs).</li>
   </ul>
 
   <h2>Uşaqlar</h2>
